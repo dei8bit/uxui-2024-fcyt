@@ -1,0 +1,219 @@
+---
+import Layout from "../layout/layout.astro";
+import InfoAbout from "../components/InfoAbout.astro";
+
+import circles from "../assets/svg/Circles.svg";
+import roadArrow from "../assets/svg/roadArrow.svg";
+// Frontend
+import html from "../assets/svg/skills/frontend/html.svg";
+import css from "../assets/svg/skills/frontend/css.svg";
+import js from "../assets/svg/skills/frontend/js.svg";
+import astro from "../assets/svg/skills/frontend/astro.svg";
+import tailwind from "../assets/svg/skills/frontend/tailwind.svg";
+import figma from "../assets/svg/skills/frontend/figma.svg";
+import react from "../assets/svg/skills/frontend/react.svg";
+import svelte from "../assets/svg/skills/frontend/svelte.svg";
+// Backend
+import node from "../assets/svg/skills/backend/node.svg";
+import bun from "../assets/svg/skills/backend/bun.svg";
+import npm from "../assets/svg/skills/backend/npm.svg";
+import netlify from "../assets/svg/skills/backend/netlify.svg";
+import pnpm from "../assets/svg/skills/backend/pnpm.svg";
+import sqlite from "../assets/svg/skills/backend/sqlite.svg";
+import supabase from "../assets/svg/skills/backend/supabase.svg";
+import vite from "../assets/svg/skills/backend/vite.svg";
+---
+
+<Layout>
+  <article class="flex-row-center">
+    <InfoAbout
+      message="Desarrollador de paginas web con fuertes influencias artisticas Abordo Cada proyecto como un plan completo de principio a fin Me encanta crear sitios personalizados y dedicados"
+    />
+    <InfoAbout
+      message="Con Las habilidades suficientes cualquier proyecto es posible Desde Landing Pages hasta complejos E-Commerce No hay problema que no tenga solucion"
+    />
+    <InfoAbout
+      message="No dudes en contactarme en mis redes Recibo llamadas a cualquier hora necesaria Podes enviarme un mensaje personal en Contacto"
+    />
+  </article>
+
+  <section class="flex-row-center">
+    <article class="roadmapConteiner flex-col-center">
+      <h2 class="heading2">Abordaje de Proyectos</h2>
+
+      <div class="roadmap">
+        <div class="ball_and_circles">
+          <article class="roadmapsus">
+            <div class="roadmapLeft">
+
+              <div class="roadmap_text">
+                <h3 class="heading3">Planeacion</h3>
+                <p class="informative">Un buen Plan necesita Tiempo y Dedicacion</p>
+              </div>
+              <div class="roadmap_text">
+                <h3 class="heading3">Prueba</h3>
+                <p class="informative"> Siempre es necesario comprobar si todo esta en el orden correcto</p>
+              </div>
+            </div>
+
+            <img class="roadArrow" src={roadArrow.src} alt="" />
+
+            <div class="roadmapRight">
+              <div class="roadmap_text">
+                <h3 class="heading3">Conversacion</h3>
+                <p class="informative"> La comunicacion es crucial  para comprender la idea</p>
+              </div>
+              <div class="roadmap_text">
+                <h3 class="heading3">Diseño</h3>
+                <p class="informative">Al conocer las necesidades el diseño fluye correctamente</p>
+                </p>
+              </div>
+              <div class="roadmap_text">
+                <h3 class="heading3">Realidad</h3>
+                <p class="informative"> Los grandes ideas perduran pero deben al menos ser reales</p>
+              </div>
+            </div>
+          </article>
+          <div class="ball"></div>
+          <img class="circles" src={circles.src} alt="" />
+        </div>
+      </div>
+    </article>
+    
+    <article class="skillsConteiner flex-col-center">
+      <h2 class="heading2">Skills</h2>
+
+      <div class="skills">
+        <div>
+          <h3 class="heading3">Frontend Skills</h3>
+          <div class="skillsCard">
+            <img src={html.src} alt="" />
+            <img src={css.src} alt="" />
+            <img src={js.src} alt="" />
+            <img src={astro.src} alt="" />
+            <img src={tailwind.src} alt="" />
+            <img src={figma.src} alt="" />
+            <img src={react.src} alt="" />
+            <img src={svelte.src} alt="" />
+          </div>
+        </div>
+
+        <div>
+          <h3 class="heading3">Backend Skills</h3>
+          <div class="skillsCard">
+            <img src={node.src} alt="" />
+            <img src={vite.src} alt="" />
+            <img src={npm.src} alt="" />
+            <img src={netlify.src} alt="" />
+            <img src={pnpm.src} alt="" />
+            <img src={sqlite.src} alt="" />
+            <img src={supabase.src} alt="" />
+            <img src={bun.src} alt="" />
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+</Layout>
+
+<style>
+  h3{
+    color: var(--accent);
+  }
+
+  .roadmapsus {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .roadmapRight{
+      display: flex;
+      flex-direction: column;
+      
+      justify-content: space-between;
+    }
+
+    .roadmapLeft{
+      display: flex;
+      flex-direction: column;
+      
+      justify-content: space-around  ;
+    }
+
+
+  }
+  .roadmap_text {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    min-width: 220px;
+  }
+
+  .roadmap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 806px;
+    height: 600px;
+  }
+
+  .ball_and_circles {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    height: 600px;
+    width: 600px;
+  }
+
+  .ball {
+    min-width: 600px; /* Asegura un ancho mínimo */
+    min-height: 600px;
+
+    position: absolute;
+    top: 10px;
+
+    background: radial-gradient(
+      56.2% 56.2% at 44.7% 48.5%,
+      rgba(97, 126, 179, 0.4) 0%,
+      rgba(136, 90, 243, 0.4) 100%
+    );
+    filter: blur(16px);
+    z-index: -1;
+    border-radius: 50%;
+  }
+
+  .circles {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  .skills {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .skillsCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    gap: 20px;
+    width: 180px;
+    background: rgba(7, 7, 26, 0.15);
+    border: 1px solid #abb2bf;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 4px;
+  }
+
+  section {
+    justify-content: space-between;
+    width: 190vh;
+    margin: 40px;
+  }
+  h2 {
+    color: var(--primary);
+  }
+</style>

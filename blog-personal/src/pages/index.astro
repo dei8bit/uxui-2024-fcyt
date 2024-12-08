@@ -1,0 +1,54 @@
+---
+import Layout from "../layout/layout.astro";
+import Line from "../assets/svg/arrowLine.svg";
+---
+
+<Layout>
+  <h1 class="heading1">
+    Diseño web - Desarrollo de software - soluciones completas
+  </h1>
+  <p class="paragraph1">
+    El universo mas grande que han creado los humanos es el universo del codigo
+  </p>
+
+  <article>
+    <ul>
+      <li class="flex-row-center transition3seg">
+        <a href="/about"> <h2 class="heading2">Acerca De Mi</h2></a>
+        <img src={Line.src} alt="" />
+      </li>
+      <li class="flex-row-center transition3seg">
+        <a href="/contact"> <h2 class="heading2">Contactame</h2></a>
+        <img src={Line.src} alt="" />
+      </li>
+      <li class="flex-row-center transition3seg">
+        <a href="/proyects"> <h2 class="heading2">Ultimos Proyectos</h2></a>
+        <img src={Line.src} alt="" />
+      </li>
+    </ul>
+  </article>
+</Layout>
+
+<style>
+  article {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  ul > li:hover {
+    filter: drop-shadow(0px 0px 10px #010914);
+  }
+
+  li {
+    justify-content: space-between;
+    width: 110vh;
+  }
+
+  h2::first-letter {
+    color: var(--secondary);
+  }
+  a{
+    text-decoration: none;
+  }
+</style>

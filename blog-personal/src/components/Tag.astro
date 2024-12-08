@@ -1,0 +1,39 @@
+---
+const { tagName, color ="#ddd" } = Astro.props;
+
+const colors = {
+  yellow: "#f4ee44",
+  pink: "#ff87ab",
+  green: "#2CB350",
+  blue: "#43B0B3"
+};
+
+
+
+---
+
+<div class="tag transition3seg flex-row-center" style={{ background: colors[color]  }}>
+  {tagName}
+</div>
+
+<style>
+  .tag {
+    height: 30px;
+    box-sizing: border-box;
+    font-size: var(--size-text1);
+    padding: 4px 10px;
+    gap: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    user-select: none;
+  }
+
+
+  .tag:hover{
+    box-shadow: 0px 0px 10px var(--background);
+    }
+</style>
+
+
+
+

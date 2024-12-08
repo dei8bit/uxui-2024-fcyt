@@ -1,0 +1,124 @@
+/*_ FONTS IMPORTED */
+@font-face {
+  font-family: "koho-300";
+  src: url("fonts/koho-300-normal.woff2") format("truetype");
+}
+
+@font-face {
+  font-family: "koho-400";
+  src: url("fonts/koho-400-normal.woff2") format("truetype");
+}
+
+@font-face {
+  font-family: "koho-500";
+  src: url("fonts/koho-500-normal.woff2") format("truetype");
+}
+
+:root {
+  /* Color styles */
+  --text: hsl(184, 87%, 94%);
+  --background: hsl(180, 87%, 3%);
+  --primary: hsl(182, 90%, 46%);
+  --secondary: hsl(296, 90%, 27%);
+  --accent: hsl(328, 89%, 40%);
+
+
+  /* Text-size styles */
+  --size-h1: 2.3rem;
+  --size-h2: 1.9rem;
+  --size-h3: 1.6rem;
+  --size-text1: 1.4rem;
+  --size-text2: 1.2rem;
+  --size-text-info: 0.9rem;
+}
+
+
+
+
+
+
+/*_ GENERAL STYLES _*/
+html {
+  background: var(--background);
+  background-image: url("./assets/background.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
+}
+
+
+/*_ REUSABLE CLASSES _*/
+
+
+.transition3seg {
+  cursor: pointer;
+  transition: .3s;
+}
+.blur-shadow{
+  filter: drop-shadow(0px 0px 10px #1d70e4d5);
+  backdrop-filter: blur(10px);
+}
+
+.flex-col-center {
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
+}
+
+.flex-row-center {
+  display: flex;
+  flex-direction: row;
+  place-content: center;
+  place-items: center;
+}
+
+
+/*_ TEXT STYLES */
+
+.heading1 {
+  font-size: var(--size-h1);
+  font-family: "koho-500";
+  color: var(--text);
+}
+
+.heading2 {
+  font-size: var(--size-h2);
+  font-family: "koho-400";
+  color: var(--text);
+}
+
+.heading3 {
+  color: var(--color-yellow);
+  font-size: var(--size-h3);
+  font-family: "koho-400";
+  color: var(--text);
+  margin: 4px;
+}
+
+.paragraph1 {
+  font-size: var(--size-text1);
+  font-family: "koho-400";
+  color: var(--text);
+}
+
+.paragraph2 {
+  font-size: var(--size-text2);
+  font-family: "koho-400";
+  color: var(--text);
+}
+
+.informative {
+  font-size: var(--size-text-info);
+  font-family: "koho-300";
+  color: var(--text);
+  margin: 4px;
+}

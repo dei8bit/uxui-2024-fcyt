@@ -1,0 +1,60 @@
+---
+  import Gmail from "../assets/svg/socials/gmail.svg";
+  import X from "../assets/svg/socials/x.svg";
+  import Wsp from "../assets/svg/socials/wsp.svg";
+  import Github from "../assets/svg/socials/github.svg";
+
+---
+<footer class="blur-shadow">
+  <div>
+    <img src={Gmail.src} alt="">
+    <a class="paragraph1 transition3seg">happyCode@gmail.com</a>
+  </div>
+  <div>
+    <img src={X.src} alt="">
+    <a class="paragraph1 transition3seg" target="_blank" href="https://x.com/dei8bit">https://x.com/dei8bit</a>
+  </div>
+  <div>
+    <img src={Wsp.src} alt="">
+    <a class="paragraph1 transition3seg" > 3442123456</a>
+  </div>
+  <div>
+    <img src={Github.src} alt="">
+    <a class="paragraph1 transition3seg" target="_blank"  href="https://github.com/dei8bit">github.com/dei8bit</a>
+  </div>
+</footer>
+
+<style>
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    gap: 20px;
+    height: 100px;
+    width: 100%;
+    background: rgba(123, 7, 131, 0.2);
+    /* backdrop-filter: blur(10px); */
+    box-sizing: border-box;
+  }
+
+  
+  div{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    border-left: 4px solid #0cd8df96;
+    border-radius: 4px;
+    height: 32px;
+    padding: 4px;
+    width: 100%;
+    
+
+    a{text-decoration: none;}
+    a:hover{
+        color: var(--primary);
+        text-shadow: 0px 0px 10px var(--primary);
+      }
+  }
+</style>

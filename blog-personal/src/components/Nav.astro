@@ -1,0 +1,58 @@
+<nav>
+  <a href="/"> <p class="paragraph1 transition3seg">Inicio</p> </a>
+  <a href="/about"> <p class="paragraph1 transition3seg">Acerca De Mi</p> </a>
+  <a href="/proyects"> <p class="paragraph1 transition3seg">Proyectos</p> </a>
+  <a href="/contact"> <p class="paragraph1 transition3seg">Contacto</p> </a>
+</nav>
+
+<style>
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 8px 64px;
+    gap: 100px;
+    width: 150vh;
+    height: 70px;
+
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  p {
+    position: relative;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-property: color;
+  }
+
+  p:focus,
+  p:hover {
+    color: var(--accent);
+    text-shadow: var(--shadow);
+  }
+
+  p:focus:after,
+  p:hover:after {
+    width: 100%;
+    left: 0%;
+  }
+
+  p:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: var(--primary);
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+  }
+</style>

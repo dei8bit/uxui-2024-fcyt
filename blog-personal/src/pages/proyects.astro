@@ -1,0 +1,75 @@
+---
+import Layout from "../layout/layout.astro";
+import ProyectItem from "../components/proyect_item.astro";
+import Tag from "../components/Tag.astro";
+
+import Conversor from "../assets/conversor.png";
+import Recorder from "../assets/recorder.png";
+import Package from "../assets/package.png";
+import YourTickets from "../assets/yourtickets.png";
+import YTDuration from "../assets/ytduration.png";
+---
+
+<Layout>
+  <article>
+    <h2 class="heading2">Proyectos Terminados</h2>
+
+    <ProyectItem
+      Proyect="Conversor decimal to"
+      Description="Este conversor reactivo te permite rapidamente convertir valores de decimal a: binario, octal, hexadecimal, IEEE754 de 64bits y IEEE754 de 32bits. Su magia esta en la velocidad y el metodo de converscion instantanea sin tener que apretar botones, recargar paginas ni ningun paso innecesario extra"
+      imgSrc={Conversor}
+    >
+      <Tag tagName="Svelte" color="pink" />
+      
+    </ProyectItem>
+
+    <ProyectItem
+      Proyect="Recorder PWA"
+      Description="Una simple grabadora de ventanas del navegador que aprovecha los codex integrados nativos en los browsers para poder grabar videos sin audio de forma rapida y gratuita"
+      imgSrc={Recorder}
+    >
+      <Tag tagName="VanillaJS" color="yellow" />
+      <Tag tagName="ServiceWorkers" color="blue" />
+    </ProyectItem>
+
+    <ProyectItem
+      Proyect="LIGHT-ID Package"
+      Description="Un paquete de NPM que te permite generar IDs unicos con una basta cantidad de configuraciones disponibles  y una gran cantidad de opciones de generacion, la documentacion del mismo explica en detalle su funcionamiento"
+      imgSrc={Package}
+    >
+      <Tag tagName="npm" color="pink" />
+      <Tag tagName="VanillaJS" color="yellow" />
+    </ProyectItem>
+
+    <ProyectItem
+      Proyect="Youtube velocity calculator"
+      Description="Una aplicacion que calcula la duracion de un video de youtube y te proporciona informacion sobre la cantidad de tiempo que ganarias o perderias en base a la velocidad a la que mires el video"
+      imgSrc={YTDuration}
+    >
+    <Tag tagName="Svelte" color="pink" />
+    <Tag tagName="YoutubeAPI" color="green" />
+    </ProyectItem>
+  </article>
+
+  <h2 class="heading2">Proyectos En proceso</h2>
+  <ProyectItem
+    Proyect="Your Tickets APP"
+    Description="Una  PWA con tentativa de ser una mobile app y cuyo objetivo es permitirte cobrar registrar, administrar y visualizar tickets que quieras generar para eventos perzonaliados, y poder llevar un registro de las ventas y estadisticas de las mismas"
+    imgSrc={YourTickets}
+  >
+    <Tag tagName="svelte" color="pink" />
+    <Tag tagName="ServiceWorkers" color="blue" />
+  </ProyectItem>
+</Layout>
+
+<style>
+  h2 {
+    color: var(--primary);
+  }
+  article {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+  }
+</style>

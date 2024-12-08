@@ -1,0 +1,214 @@
+---
+import Layout from "../layout/layout.astro";
+import messageIcon from "../assets/svg/Message.svg";
+
+import Gmail from "../assets/svg/socials/gmail.svg";
+import X from "../assets/svg/socials/x.svg";
+import Wsp from "../assets/svg/socials/wsp.svg";
+import Github from "../assets/svg/socials/github.svg";
+---
+
+<Layout>
+  <h2 class="heading2">
+    Podemos juntos encontrar una solucion perfecta y hacerla realidad
+  </h2>
+
+  <form>
+    <img class="formIcon" src={messageIcon.src} alt="" />
+
+    <section class="section1">
+      <h3 class="heading3">Escribime</h3>
+      <input
+        class="fieldsForm paragraph2 transition3seg"
+        placeholder="Nombre..."
+        type="text"
+        maxlength="120"
+      />
+      <input
+        class="fieldsForm paragraph2 transition3seg"
+        placeholder="Email..."
+        type="text"
+        maxlength="120"
+      />
+
+      <textarea maxlength="250" name="mensaje" placeholder="Mensaje..." class="fieldsForm paragraph2 transition3seg"></textarea>
+      
+      <button type="reset" class="paragraph2 transition3seg">Enviar Mensaje</button>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section2">
+      <h3 class="heading3">Contactame</h3>
+
+      <div>
+        <img src={Gmail.src} alt="" />
+        <a class="informative transition3seg">happyCode@gmail.com</a>
+      </div>
+      <div>
+        <img src={X.src} alt="" />
+        <a
+          class="informative transition3seg"
+          target="_blank"
+          href="https://x.com/dei8bit">https://x.com/dei8bit</a
+        >
+      </div>
+      <div>
+        <img src={Wsp.src} alt="" />
+        <a class="informative transition3seg">3442123456</a>
+      </div>
+      <div>
+        <img src={Github.src} alt="" />
+        <a
+          class="informative transition3seg"
+          target="_blank"
+          href="https://github.com/dei8bit">github.com/dei8bit</a
+        >
+      </div>
+    </section>
+  </form>
+</Layout>
+
+<style>
+
+  h3{
+    width:  100%;
+  }
+.divider {
+    height: 100%;
+    border: 1px  solid rgba(255, 255, 255, 0.349);
+
+}
+
+  .formIcon {
+    position: absolute;
+    top: -10%;
+    left: -10%;
+  }
+
+  .section1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4px;
+    gap: 20px;
+    width: 348px;
+  }
+
+  hr {
+    width: 120%;
+    transform: rotate(90deg);
+  }
+
+  .fieldsForm {
+    box-sizing: border-box;
+    padding: 10px;
+    width: 340px;
+    height: 40px;
+    background: rgba(198, 201, 199, 0.3);
+    border: 1px solid var(--background);
+    box-shadow: 0px 10px 20px rgba(7, 7, 26, 0.2);
+    border-radius: 10px;
+    outline: none;
+  }
+
+  .fieldsForm::placeholder {
+    color: var(--primary);
+    opacity: 0.5;
+  }
+
+  .fieldsForm:focus::placeholder {
+    color: var(--primary);
+    opacity: 1;
+  }
+
+  .fieldsForm:focus {
+    box-shadow: 0px 10px 20px rgba(7, 7, 26, 0.5);
+  }
+
+
+  textArea[name="mensaje"] {
+    resize: none;
+    height: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) var(--background); 
+  }
+
+  form {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    gap: 20px;
+
+    width: 794px;
+    height: 484px;
+
+    background: rgba(123, 7, 131, 0.2);
+    border: 1px solid #0cd8df;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+  }
+
+
+
+  .section2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+
+    div {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      border-left: 4px solid #0cd8df96;
+      border-radius: 4px;
+      height: 32px;
+      padding: 4px;
+      width: 100%;
+
+      a {
+        text-decoration: none;
+      }
+      a:hover{
+        color: var(--primary);
+        text-shadow: 0px 0px 10px var(--primary);
+      }
+
+      > img {
+        width: 30px;
+      }
+    }
+  }
+
+  button {
+    color: var(--background);
+    font-size: var(--size-text2);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 200px;
+    height: 40px;
+    background: #c10b6c;
+    box-shadow: 0px 10px 20px rgba(7, 7, 26, 0.15);
+    border-radius: 4px;
+    outline: none;
+    border: none;
+  }
+
+
+  button:hover{
+
+    box-shadow: 0px 0px 10px var(--primary);
+
+
+  }
+</style>
